@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>new</title>
+    <style>
+      body {
+        background-color: rgb(198, 188, 201);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1 class="text-4xl text-center font-bold">Todo App</h1>
+    <form method="post" action="/posts">
+      <div
+        class="mx-20 my-5 bg-yellow-400 rounded-lg border-2 border-indigo-500"
+      >
+        <h2 class="text-3xl p-3 font-bold text-red-500">
+          Title :
+          <input
+            type="text"
+            name="title"
+            class="min-w-0 grow bg-yellow-400 border-2 border-sky-200 rounded-lg focus:outline-none"
+          />
+        </h2>
+        <div class="flex">
+          <h1 class="pl-3 pb-2 text-2xl">Description</h1>
+          <textarea
+            rows="3"
+            cols="43"
+            name="description"
+            class="ml-4 mb-3 bg-yellow-400 border-2 border-black-200 rounded-lg focus:outline-none"
+          ></textarea>
+        </div>
+      </div>
+
+      <button
+        class="bg-blue-700 text-white text-3xl rounded-xl px-7 py-4 ml-20"
+      >
+        Submit
+      </button>
+    </form>
+    
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <style>
+      body {
+        background-color: rgb(198, 188, 201);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1 class="text-4xl text-center font-bold">Todo List</h1>
+    <%for(post of posts){%>
+    <div
+      class="flex justify-between items-center mx-20 my-5 bg-yellow-400 rounded-lg border-2 border-indigo-500 "
+    >
+      <div>
+        <h2 class="text-3xl p-3 font-bold text-red-500"><%=post.title %></h2>
+        <p class="pl-3 pb-2 text-xl"><%=post.Description%></p>
+      </div>
+      <div>
+        <a
+          class="bg-blue-700 text-white text-2xl rounded-xl px-5 py-2 mr-2"
+          href="http://localhost:8080/posts/<%=post.id%>"
+          >Detail</a
+        >
+      </div>
+    </div>
+    <%}%>
+
+    <a
+      href="/posts/new"
+      class="bg-blue-700 text-white text-3xl rounded-xl px-7 py-3 ml-20 mt-20"
+    >
+      Create a List
+    </a>
+  </body>
+</html>

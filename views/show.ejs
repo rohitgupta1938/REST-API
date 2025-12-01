@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Todo by id</title>
+    <style>
+      body {
+        background-color: rgb(198, 188, 201);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+      <h1 class="text-4xl text-center font-bold">Todo List</h1>
+      <div
+        class="mx-20 my-5 bg-yellow-400 rounded-lg border-2 border-indigo-500"
+      >
+        <h1 class="text-3xl pl-3 pt-3 font-bold text-violet-500">id : <%=post.id %></h1>
+        <h2 class="text-3xl p-3 font-bold text-red-500"><%=post.title %></h2>
+        <p class="pl-3 pb-2 text-xl"><%=post.Description%></p>
+      </div>
+  </body>
+</html>
