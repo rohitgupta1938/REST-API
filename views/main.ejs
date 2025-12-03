@@ -12,14 +12,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1 class="text-4xl text-center font-bold">Todo List</h1>
+    <h1 class="text-4xl text-center font-bold mt-10">Todo List</h1>
     <%for(post of posts){%>
     <div
-      class="flex justify-between items-center mx-20 my-5 bg-yellow-400 rounded-lg border-2 border-indigo-500 "
+      class="flex justify-between items-center mx-20 my-5 bg-yellow-400 rounded-lg border-2 border-indigo-500"
     >
       <div>
         <h2 class="text-3xl p-3 font-bold text-red-500"><%=post.title %></h2>
-        <p class="pl-3 pb-2 text-xl"><%=post.Description%></p>
+        <p class="pl-3 pb-2 text-xl"><%=post.description%></p>
       </div>
       <div>
         <a
@@ -27,6 +27,14 @@
           href="http://localhost:8080/posts/<%=post.id%>"
           >Detail</a
         >
+        <a
+          class="bg-green-600 text-white text-2xl rounded-xl px-5 py-2 mr-2 ml-2"
+          href="http://localhost:8080/posts/<%=post.id%>/edit"
+          >Edit</a
+        >
+        <form method="POST" action="/postS/<%=post.id%>?_method=DELETE" class="inline-block">
+          <button class="bg-red-600 text-white text-2xl rounded-xl px-5 py-2 mr-2 ml-2">Delete</button>
+        </form>
       </div>
     </div>
     <%}%>
